@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "painting": {
+    "artist": "Şeker Ahmed Paşa",
+    "title": "Kavunlu Natürmort",
+    "source": "Course-provided Project1/assets/kavunlu.js"
+  },
+  "type": "bezier",
+  "coordinates": "normalized painting coordinates; origin bottom-left; x right, y up",
+  "parameterization": "equal segment intervals",
+  "points": [
+    [
+      0.29,
+      0.77
+    ],
+    [
+      0.36,
+      0.88
+    ],
+    [
+      0.48,
+      0.9
+    ],
+    [
+      0.56,
+      0.88
+    ],
+    [
+      0.64,
+      0.86
+    ],
+    [
+      0.74,
+      0.81
+    ],
+    [
+      0.8,
+      0.75
+    ],
+    [
+      0.86,
+      0.69
+    ],
+    [
+      0.89,
+      0.6
+    ],
+    [
+      0.9,
+      0.49
+    ]
+  ]
+}

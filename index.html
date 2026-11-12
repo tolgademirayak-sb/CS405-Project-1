@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Still Life / In Motion — CS405</title>
+    <link rel="stylesheet" href="/src/ui/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="brand">CS405 <span>/ PROJECT 01</span></div>
+      <h1>Still Life <em>/ In Motion</em></h1>
+      <p>
+        Şeker Ahmed Paşa · Kavunlu Natürmort
+        <span>TRANSFORMATIONS · CAMERAS · CURVES</span>
+      </p>
+    </header>
+    <main>
+      <section class="stage">
+        <div class="toolbar">
+          <label
+            >View
+            <select id="view">
+              <option value="main">Main camera</option>
+              <option value="split">Main + inspection</option>
+              <option value="trace">Trace painting</option>
+            </select></label
+          ><label
+            >Projection
+            <select id="projection">
+              <option value="perspective">Perspective</option>
+              <option value="orthographic">Orthographic</option>
+            </select></label
+          ><button id="reset">Reset scene</button
+          ><button id="capture">Save PNG</button>
+        </div>
+        <div class="canvas-wrap">
+          <canvas id="scene"></canvas>
+          <div class="badge" id="view-label">MAIN CAMERA</div>
+          <div id="error" hidden></div>
+          <div class="legend">
+            Drag to orbit · Scroll to zoom · Trace view: drag points /
+            Shift-click to extend
+          </div>
+        </div>
+        <div class="stats">
+          <span id="timing">Initializing WebGPU…</span
+          ><span id="vertices"></span><span id="gpu"></span>
+        </div>
+        <div class="matrix-grid">
+          <div>
+            <h3>M = T · R · S</h3>
+            <pre id="trs"></pre>
+          </div>
+          <div>
+            <h3>M = S · R · T</h3>
+            <pre id="srt"></pre>
+          </div>
+        </div>
+        <details>
+          <summary>Camera & hierarchy diagnostics</summary>
+          <pre id="camera-info"></pre>
+          <pre id="tree"></pre>
+          <h3>World matrix: lamp head</h3>
+          <pre id="leaf"></pre>
+        </details>
+      </section>
+      <aside id="controls"></aside>
+    </main>
+    <footer>
+      Column-major matrices · Right-handed world · WebGPU depth [0,1] · No
+      graphics or mathematics libraries
+    </footer>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
